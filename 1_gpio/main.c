@@ -45,7 +45,7 @@ int main(){
 	GPIO0->PIN_CNF[28] = 1; //Col 1
 	GPIO0->PIN_CNF[11] = 1; //Col 2
 	GPIO0->PIN_CNF[31] = 1; //Col 3
-	GPIO1->PIN_CNF[5] = 1;  //Col 4
+	GPIO1->PIN_CNF[5] = 1;  //Col 4 // denne er satt 
 	GPIO0->PIN_CNF[30] = 1; //Col 5 
 	
 	// Configure buttons (dere må sjekke selv hvilken GPIO modul de ulike knappene tilhører)
@@ -55,7 +55,7 @@ int main(){
 	int sleep = 0;
 	while(1){
 
-		int button_puched_A(){
+		int button_puched_A(){ //returnerer verdi 0 om knappen trykkes, dette fordi den er aktiv høy
 			return((GPIO0 -> IN & (1<<14)));
 		}
 		int button_puched_B(){
@@ -64,15 +64,15 @@ int main(){
 
 		if(button_puched_B()== 0){
 			 GPIO0->OUTSET = (1<<21);
-   			GPIO0->OUTSET = (1<<22);
-   			GPIO0->OUTSET = (1<<15);
-   			GPIO0->OUTSET = (1<<24);
-   			GPIO0->OUTSET = (1<<19);
+   			 GPIO0->OUTSET = (1<<22);
+   			 GPIO0 ->OUTSET = (1<<15);
+   			 GPIO0->OUTSET = (1<<24);
+   			 GPIO0->OUTSET = (1<<19);
 		}
 		
 		if (button_puched_A()==0)
 		{
-			GPIO0->OUTCLR = (1<<21);
+			GPIO0->OUTCLR = (1<<21); // setter clear 1 for å sette pin 0. 
    			GPIO0->OUTCLR = (1<<22);
    			GPIO0->OUTCLR = (1<<15);
    			GPIO0->OUTCLR = (1<<24);
