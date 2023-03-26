@@ -9,6 +9,7 @@ int main(){
    char A = "A";
    char B = "B";
    int light_on = 0;
+   char letter = uart_read();
 
     while (1)
     {   
@@ -28,12 +29,12 @@ int main(){
         }
 
 
-        if ((light_on == 0) & (uart_read() != "\0"))
+        if ((light_on == 0) && ( letter != '\0'))
         {
             gpio_lights_on();
             light_on = 1;
 
-        } else if( (light_on == 1) & (uart_read() != "\0"))
+        } else if( (light_on == 1) && (letter != '\0'))
         {
             gpio_lights_off();
             light_on = 0;

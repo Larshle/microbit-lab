@@ -36,7 +36,7 @@ char uart_read(){
     UART0 -> TASKS_STARTRX = 0x1;  // starter lesing av registeret
     
     while (!UART0->EVENTS_RXDRDY){ // flagget blir satt til 1 så går den ut av loopen og leser dataen 
-        return "\0";
+        return '\0';
     }
    
     char letter = UART0 -> RXD;
