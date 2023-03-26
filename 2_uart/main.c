@@ -6,8 +6,8 @@ int main(){
 
    gpio_init();
    uart_init();
-   char A = "A";
-   char B = "B";
+   char A = 'A';
+   char B = 'B';
    int light_on = 0;
    char letter = uart_read();
 

@@ -1,7 +1,7 @@
 #pragma once
 #include <stdint.h>
 #define UART0 ((NRF_UART_REG*)0x40002000) // definerer en peker til baseadressen til uart structen
-#define UART0 ((NRF_UART_REG*)0x40002000)
+
 typedef struct 
 {
     volatile uint32_t TASKS_STARTRX;
