@@ -1,5 +1,5 @@
 FAMILY := nrf52
-SOURCE := gpio.c uart.c main.c
+SOURCE := main.c gpio.c uart.c 
 
 BUILD_DIR := .build_system
 LINKER_SCRIPT := $(BUILD_DIR)/linker_script.ld
