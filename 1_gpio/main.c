@@ -63,11 +63,13 @@ int main(){
 		}
 
 		if(button_puched_B()== 0){
-			 GPIO0->OUTSET = (1<<21);
-   			 GPIO0->OUTSET = (1<<22);
-   			 GPIO0 ->OUTSET = (1<<15);
-   			 GPIO0->OUTSET = (1<<24);
-   			 GPIO0->OUTSET = (1<<19);
+			//  GPIO0->OUTSET = (1<<21);
+   			//  GPIO0->OUTSET = (1<<22);
+   			//  GPIO0 ->OUTSET = (1<<15);
+   			//  GPIO0->OUTSET = (1<<24);
+   			//  GPIO0->OUTSET = (1<<19);
+			
+
 		}
 		
 		if (button_puched_A()==0)
