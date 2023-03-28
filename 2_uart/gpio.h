@@ -39,6 +39,9 @@ void gpio_init();
 void gpio_lights_on();
 void gpio_lights_off();
 
+int buttn_A();
+int buttn_B();
+
 
 #endif
 

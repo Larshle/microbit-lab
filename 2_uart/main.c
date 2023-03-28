@@ -14,13 +14,6 @@ int main(){
     while (1)
     {   
        
-        int buttn_A(){
-            return((GPIO0->IN & (1<<14)));
-        }
-        int buttn_B(){
-            return((GPIO0->IN & (1<< 23)));
-        }
-
         if (buttn_A() == 0){
             uart_send(A);
         }

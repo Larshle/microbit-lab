@@ -34,3 +34,11 @@ void gpio_lights_off(){
    GPIO0->OUTCLR = (1<<24);
    GPIO0->OUTCLR = (1<<19);
 };
+
+int buttn_A(){
+            return((GPIO0->IN & (1<<14)));
+        }
+
+int buttn_B(){
+            return((GPIO0->IN & (1<< 23)));
+        }
