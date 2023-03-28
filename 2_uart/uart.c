@@ -7,8 +7,8 @@ void uart_init(){ //inisialliserer UART
     GPIO1 -> PIN_CNF[8] = 1;  // setter TX pinnen til output
     GPIO0 -> PIN_CNF[6] = 0;  // setter RX pinnen til innput
     
-    UART0 -> PSEL_TXD = 8; // setter riktig pin til UART modulen, "mappes" pin til uart registre
-    UART0 -> PSEL_RXD = 6; 
+    UART0 -> PSEL_TXD = 0x00000028; // setter riktig pin til UART modulen, "mappes" pin til uart registre
+    UART0 -> PSEL_RXD = 0x6; 
 
     UART0 -> BAUDRATE = 0x00275000; // setter baudrate/bits per s til 9600 fordi vi ikke har no CTS eller RTS pins
     
